@@ -1,39 +1,9 @@
 <!DOCTYPE html>
-<script src="https://aframe.io/releases/0.6.1/aframe.min.js"></script>
-<script src="https://cdn.rawgit.com/jeromeetienne/AR.js/1.5.0/aframe/build/aframe-ar.js"></script>
-<script>
-    window.addEventListener('camera-init', (data) => {
-      console.log('camera-init', data);
-      alert('camera-init', data);
-        // TODO: Add your own code
-    })
-
-    window.addEventListener('camera-error', (error) => {
-      console.log('camera-error', error);
-      alert('camera-error', error);
-        // TODO: Add your own code e.g. splash screen, message to user, etc.
-    })
-
-	AFRAME.registerComponent('registerevents', {
-		init: function () {
-			var marker = this.el;
-
-			marker.addEventListener('markerFound', function() {
-				var markerId = marker.id;
-				console.log('markerFound', markerId);
-				// TODO: Add your own code here to react to the marker being found.
-        document.querySelector("a-box").material = "opacity: 0.5; side: double;color:green;";
-			});
-
-			marker.addEventListener('markerLost', function() {
-				var markerId = marker.id;
-				console.log('markerLost', markerId);
-				// TODO: Add your own code here to react to the marker being lost.
-			});
-		}
-	});
-</script>
-
+<head>
+  <title>Events</title>
+  <script src="https://aframe.io/releases/0.6.1/aframe.min.js"></script>
+  <script src="https://cdn.rawgit.com/jeromeetienne/AR.js/1.5.0/aframe/build/aframe-ar.js"></script>
+</head>
 <body style='margin : 0px; overflow: hidden; font-family: Monospace;'><div style='position: fixed; top: 10px; left: 5px; text-align: center; z-index: 1;'>
 	<a href="https://github.com/jeromeetienne/AR.js/" target="_blank">AR.js</a> - marker events example for a-frame - look at the js console
 	<br/>
@@ -54,5 +24,38 @@
 		<!-- add a simple camera -->
 		<a-entity camera></a-entity>
 	</a-scene>
+
+  <script>
+      window.addEventListener('camera-init', (data) => {
+        console.log('camera-init', data);
+        alert('camera-init', data);
+          // TODO: Add your own code
+      })
+
+      window.addEventListener('camera-error', (error) => {
+        console.log('camera-error', error);
+        alert('camera-error', error);
+          // TODO: Add your own code e.g. splash screen, message to user, etc.
+      })
+
+  	AFRAME.registerComponent('registerevents', {
+  		init: function () {
+  			var marker = this.el;
+
+  			marker.addEventListener('markerFound', function() {
+  				var markerId = marker.id;
+  				console.log('markerFound', markerId);
+  				// TODO: Add your own code here to react to the marker being found.
+          document.querySelector("a-box").material = "opacity: 0.5; side: double;color:green;";
+  			});
+
+  			marker.addEventListener('markerLost', function() {
+  				var markerId = marker.id;
+  				console.log('markerLost', markerId);
+  				// TODO: Add your own code here to react to the marker being lost.
+  			});
+  		}
+  	});
+  </script>
 </body>
 </html>

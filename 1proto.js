@@ -13,22 +13,7 @@ param.onload = function() {
   let img = document.getElementById('my-image');
 };
 
-AFRAME.registerComponent('registerevents', {
-		init: function () {
-			var marker = this.el;
-			marker.addEventListener('markerFound', function() {
-				var markerId = marker.id;
-				alert('markerFound', markerId);
-				// TODO: Add your own code here to react to the marker being found.
-        alert(document.querySelector("a-torus-knot").material.color);
-			});
-			marker.addEventListener('markerLost', function() {
-				var markerId = marker.id;
-				alert('markerLost', markerId);
-				// TODO: Add your own code here to react to the marker being lost.
-			});
-		}
-	});
+
 
 //Select UIs
 //Select overlays

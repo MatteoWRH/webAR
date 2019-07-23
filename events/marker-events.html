@@ -3,12 +3,14 @@
 <script src="https://cdn.rawgit.com/jeromeetienne/AR.js/1.5.0/aframe/build/aframe-ar.js"></script>
 <script>
     window.addEventListener('camera-init', (data) => {
-        console.log('camera-init', data);
+      console.log('camera-init', data);
+      alert('camera-init', data);
         // TODO: Add your own code
     })
 
     window.addEventListener('camera-error', (error) => {
-        console.log('camera-error', error);
+      console.log('camera-error', error);
+      alert('camera-error', error);
         // TODO: Add your own code e.g. splash screen, message to user, etc.
     })
 

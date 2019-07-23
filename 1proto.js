@@ -6,13 +6,7 @@ let buttons = [];
 
 console.log('media.js ');
 
-alert("start");
-
 // AR testing
-let anchorRef = document.querySelector("a-anchor");
-anchorRef.addEventListener("markerFound", (e)=>{
-  alert(e);
-});
 //markerFound, markerLost
 AFRAME.registerComponent('registerevents', {
 		init: function () {

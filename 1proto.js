@@ -19,6 +19,7 @@ AFRAME.registerComponent('registerevents', {
 				var markerId = marker.id;
 				alert('markerFound', markerId);
 				// TODO: Add your own code here to react to the marker being found.
+        alert(document.querySelector("a-torus-knot").material.color);
 			});
 			marker.addEventListener('markerLost', function() {
 				var markerId = marker.id;

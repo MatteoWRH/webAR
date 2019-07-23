@@ -9,7 +9,7 @@ console.log('media.js ');
 // AR testing
 let anchorRef = document.querySelector("a-anchor");
 anchorRef.addEventListener("markerFound", (e)=>{
-  console.log(e);
+  alert(e);
 });
 //markerFound, markerLost
 console.log()

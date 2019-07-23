@@ -1,84 +1,64 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
-  <head>
-    <meta charset="utf-8">
-    <title>1_Test_AR</title>
-    <script src="https://aframe.io/releases/0.6.1/aframe.min.js"></script>
-    <script src="https://cdn.rawgit.com/jeromeetienne/AR.js/1.5.0/aframe/build/aframe-ar.js"></script>
-    <link rel="stylesheet" type="text/css" href="1proto.css"></style>
-  </head>
-  <body style='margin : 0px; overflow: hidden;'>
-  	<!-- <div style='position: fixed; top: 10px; width:100%; text-align: center; z-index: 1;'>
-  		<a href="https://github.com/jeromeetienne/AR.js/" target="_blank">AR.js</a> - tango example for a-frame by <a href='https://twitter.com/jerome_etienne' target='_blank'>@jerome_etienne</a>
-  	</div> -->
+<head>
+  <meta charset="utf-8">
+  <title>Index</title>
+  <style media="screen">
+  a{
+    color: white;
+  }
+  h3:hover, #light:hover {
+    background-color: SlateBlue;
+  }
+  div {
+    font-family: sans-serif;
+    padding: 0% 7%;
+  }
+  h1 {
+    color: DarkSlateBlue;
+  }
+  h1 span {
+    color: MediumSlateBlue;
+  }
+  h3 {
+    margin-top: 5%;
+    padding: 2%;
+    border-radius: 1vw;
+    width: 45vw;
+    background-color: MediumPurple;
+  }
+  #light {
+    background-color: DarkSlateBlue;
+  }
+  </style>
+</head>
+<body>
+  <div class="">
+    <h1>Server is <span>running</span> </h1>
 
-  	<!-- <a-scene embedded arjs='trackingMethod: best;'>
-  		<a-anchor hit-testing-enabled='true'>
-  			<a-box position='0 0.5 0' material='opacity: 0.5; side:double; color:white;'>
-  				<a-torus-knot radius='0.26' radius-tubular='0.05'
-  				animation="property: rotation; to:360 0 0; dur: 5000; easing: linear; loop: true" material='opacity: 0.5; side:double; color:red;'>
-  				</a-torus-knot>
-  			</a-box>
-  		</a-anchor>
-  		<a-camera-static/>
-  	</a-scene> -->
+    <a href="0_helloWebVR.html">
+      <h3>
+        0
+      </h3>
+    </a>
 
-    <div class="menu">
-      <button type="button" class="o1"> 1 </button>
-      <button type="button" class="o2"> 2 </button>
-      <button type="button" class="o3"> 3 </button>
-      <button type="button" class="o4"> 4 </button>
-    </div>
+    <a href="1_ARaframe.html">
+      <h3 id="light">
+        1
+      </h3>
+    </a>
 
-    <div class="overlay o1">
-      <!-- <button type="button" name="button"></button> -->
-      <div class="modal">
-        <div class="overlay-header">
-          <h3>Video1</h3>
-          <h1 class="closeModal">X</h1>
-        </div>
-        <!-- <iframe  src="https://www.youtube.com/embed/0fKBhvDjuy0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" ></iframe> -->
-        <p>Description if needed</p>
-      </div>
-    </div>
+    <a href="2_ARinteraction.html">
+      <h3>
+        2
+      </h3>
+    </a>
 
-    <div class="overlay o2">
-      <!-- <button type="button" name="button"></button> -->
-      <div class="modal">
-        <div class="overlay-header">
-          <h3>Video2</h3>
-          <h1 class="closeModal">X</h1>
-        </div>
-
-        <!-- <iframe  src="https://www.youtube.com/embed/0fKBhvDjuy0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" ></iframe> -->
-        <p>Description 2 if needed</p>
-      </div>
-    </div>
-
-    <div class="overlay o3">
-      <!-- <button type="button" name="button"></button> -->
-      <div class="modal">
-        <div class="overlay-header">
-          <h3>Video3</h3>
-          <h1 class="closeModal">X</h1>
-        </div>
-
-        <!-- <iframe  src="https://www.youtube.com/embed/0fKBhvDjuy0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" ></iframe> -->
-        <p>Description 3 if needed</p>
-      </div>
-    </div>
-
-    <div class="overlay o4">
-      <!-- <button type="button" name="button"></button> -->
-      <div class="modal">
-        <div class="overlay-header">
-          <h3>Video4</h3>
-          <h1 class="closeModal">X</h1>
-        </div>
-        <!-- <iframe  src="https://www.youtube.com/embed/0fKBhvDjuy0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" ></iframe> -->
-        <p>Description 4 if needed</p>
-      </div>
-    </div>
-
-    <script src="index.js"></script>
-  </body>
+    <a href="3_media.html">
+      <h3 id="light">
+        3
+      </h3>
+    </a>
+  </div>
+</body>
+</html>

@@ -7,6 +7,10 @@ let buttons = [];
 console.log('media.js ');
 
 // AR testing
+let anchorRef = document.querySelector("a-anchor");
+anchorRef.addEventListener("markerFound", (e)=>{
+  alert(e);
+});
 //markerFound, markerLost
 AFRAME.registerComponent('registerevents', {
 		init: function () {
@@ -18,7 +22,7 @@ AFRAME.registerComponent('registerevents', {
 			});
 			marker.addEventListener('markerLost', function() {
 				var markerId = marker.id;
-				alert.log('markerLost', markerId);
+				alert('markerLost', markerId);
 				// TODO: Add your own code here to react to the marker being lost.
 			});
 		}

@@ -7,11 +7,12 @@ let buttons = [];
 console.log('media.js ');
 
 // AR testing
-let anchorRef = document.querySelector("a-anchor");
-anchorRef.addEventListener("markerFound", (e)=>{
-  alert(e);
-});
 //markerFound, markerLost
+let param = new ARCameraParam();
+param.onload = function() {
+  let img = document.getElementById('my-image');
+};
+
 AFRAME.registerComponent('registerevents', {
 		init: function () {
 			var marker = this.el;
